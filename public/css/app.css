@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Sans:wght@100;200;300;400;500;600;700;800;900&family=Montserrat&family=Quicksand&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #F2DCA2;
+  font-family: 'IBM', sans-serif;
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+  color: black;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+a {
+  color: #4666FF;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  padding: .5em 1em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  --c: #229091;
+  box-shadow: 0 0 0 .1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+
+#buttons-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 600px;
+	width: 100%;
+}
+
+button:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+
+button:active {
+  box-shadow: 0 0 9e9q inset #0009;
+  background-color: var(--c);
+  color: #fff;
+}
+
+h4 {
+  margin: 0;
+  scale: .2;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+
+input[type=file]::file-selector-button {
+  background-color: #c3ad6f;
+  color: #000;
+  border: 0px;
+  border-right: 1px solid #e5e5e5;
+  padding: 10px 15px;
+  margin-right: 20px;
+  transition: .5s;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #c3ad6f;
+  border: 0px;
+  border-right: 1px solid #e5e5e5;
+}
+
+#visualizerCanvas, #audioPlayer, #audioFileInput, header, article {
+  font-weight: 400;
+}
+
+#visualizerCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  scale: .6;
+  width: auto;
+  height: auto;
+  margin: auto;
+	margin-top: -80px;
+}
+
+#audioPlayer {
+	padding-top: 20px;	
+  width: 100%;
+  margin: 50px auto;
+  display: block;
+}
+
+#audioFileInput {
+	margin-top: 20px;
+  box-sizing: border-box;
+  font-size: 17px;
+  color: black;
+  z-index: 100;
+}
+
+header, article {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50px;
+	max-height: 80px;
+  color: white;
+  font-size: 25.5px;
+  background: #ceba82;
+  text-align: center;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+  z-index: 100;
+}
